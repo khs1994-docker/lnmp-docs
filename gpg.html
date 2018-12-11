@@ -1,0 +1,1209 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Git GPG · LNMP Docker 支持文档</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="khs1994.com">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="mirror.html" />
+    
+    
+    <link rel="prev" href="ab.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="//lnmp.khs1994.com" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://github.com/khs1994-docker/lnmp" target="_blank" class="custom-link">GitHub</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    首页
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="why.html">
+            
+                <a href="why.html">
+            
+                    
+                    项目初衷
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="docker.html">
+            
+                <a href="docker.html">
+            
+                    
+                    安装配置 Docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <a target="_blank" href="https://cloud.tencent.com/redirect.php?redirect=10058&cps_key=3a5255852d5db99dcd5da4c72f05df61">
+            
+                    
+                    腾讯云容器服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <a target="_blank" href="https://cloud.tencent.com/developer/support-plan?invite_code=13vokmlse8afh">
+            
+                    
+                    腾讯云自媒体
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">安装</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" >
+            
+                <span>
+            
+                    
+                    安装
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="install/linux.html">
+            
+                <a href="install/linux.html">
+            
+                    
+                    Linux macOS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="install/windows.html">
+            
+                <a href="install/windows.html">
+            
+                    
+                    Windows 10
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="init.html">
+            
+                <a href="init.html">
+            
+                    
+                    项目初始化过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="path.html">
+            
+                <a href="path.html">
+            
+                    
+                    路径说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="cli.html">
+            
+                <a href="cli.html">
+            
+                    
+                    lnmp-docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" >
+            
+                <span>
+            
+                    
+                    开发环境
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.5.1" data-path="development.html">
+            
+                <a href="development.html">
+            
+                    
+                    使用方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="git.html">
+            
+                <a href="git.html">
+            
+                    
+                    Git
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">NGINX</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="nginx/">
+            
+                <a href="nginx/">
+            
+                    
+                    NGINX
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="nginx/config.html">
+            
+                <a href="nginx/config.html">
+            
+                    
+                    一键生成配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="nginx/issue-ssl.html">
+            
+                <a href="nginx/issue-ssl.html">
+            
+                    
+                    申请或自签发 SSL 证书
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="nginx/https.html">
+            
+                <a href="nginx/https.html">
+            
+                    
+                    HTTPS 配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4" data-path="nginx/unit.html">
+            
+                <a href="nginx/unit.html">
+            
+                    
+                    NGINX Unit
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="command.html">
+            
+                <a href="command.html">
+            
+                    
+                    PHPer 常用命令容器化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="config.html">
+            
+                <a href="config.html">
+            
+                    
+                    软件配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="crontab.html">
+            
+                <a href="crontab.html">
+            
+                    
+                    Crontab
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">PHP</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" >
+            
+                <span>
+            
+                    
+                    PHP
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="php.html">
+            
+                <a href="php.html">
+            
+                    
+                    PHP 扩展列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="xdebug.html">
+            
+                <a href="xdebug.html">
+            
+                    
+                    Xdebug
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="laravel.html">
+            
+                <a href="laravel.html">
+            
+                    
+                    Laravel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.4" data-path="composer.html">
+            
+                <a href="composer.html">
+            
+                    
+                    Composer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.5" data-path="phpunit.html">
+            
+                <a href="phpunit.html">
+            
+                    
+                    PHPUnit
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" >
+            
+                <span>
+            
+                    
+                    Composer
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.2.1" data-path="composer/satis.html">
+            
+                <a href="composer/satis.html">
+            
+                    
+                    Satis
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">生产环境</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="production.html">
+            
+                <a href="production.html">
+            
+                    
+                    生产环境(重要)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.1" data-path="swarm/">
+            
+                <a href="swarm/">
+            
+                    
+                    Swarm mode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.2" data-path="kubernetes/">
+            
+                <a href="kubernetes/">
+            
+                    
+                    Kubernetes
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.2.1" data-path="kubernetes/docker-desktop.html">
+            
+                <a href="kubernetes/docker-desktop.html">
+            
+                    
+                    k8s on Docker for Desktop
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.3" data-path="registry.html">
+            
+                <a href="registry.html">
+            
+                    
+                    Docker Registry
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Supervisord</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="supervisord.html">
+            
+                <a href="supervisord.html">
+            
+                    
+                    Supervisord
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">ClusterKit</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="clusterkit/">
+            
+                <a href="clusterkit/">
+            
+                    
+                    ClusterKit
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1.1" data-path="clusterkit/mysql.html">
+            
+                <a href="clusterkit/mysql.html">
+            
+                    
+                    MySQL 一主两从
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.2" data-path="clusterkit/memcached.html">
+            
+                <a href="clusterkit/memcached.html">
+            
+                    
+                    Memcached 集群
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.3" data-path="clusterkit/redis_cluster.html">
+            
+                <a href="clusterkit/redis_cluster.html">
+            
+                    
+                    Redis Cluster 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.4" data-path="clusterkit/redis_replication.html">
+            
+                <a href="clusterkit/redis_replication.html">
+            
+                    
+                    Redis Replication
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.5" data-path="clusterkit/redis_sentinel.html">
+            
+                <a href="clusterkit/redis_sentinel.html">
+            
+                    
+                    Redis Sentinel
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" >
+            
+                <span>
+            
+                    
+                    树莓派3
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.2.1" data-path="arm.html">
+            
+                <a href="arm.html">
+            
+                    
+                    ARM架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="systemd.html">
+            
+                <a href="systemd.html">
+            
+                    
+                    systemd
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.4" data-path="backup.html">
+            
+                <a href="backup.html">
+            
+                    
+                    备份恢复
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.5" data-path="cleanup.html">
+            
+                <a href="cleanup.html">
+            
+                    
+                    清理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.6" data-path="cn.html">
+            
+                <a href="cn.html">
+            
+                    
+                    国内网络问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.7" >
+            
+                <span>
+            
+                    
+                    实验玩法
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.7.1" data-path="linuxkit.html">
+            
+                <a href="linuxkit.html">
+            
+                    
+                    LinuxKit
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7.8" data-path="wechat.html">
+            
+                <a href="wechat.html">
+            
+                    
+                    微信小程序 PHP 后端部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">port</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="port.html">
+            
+                <a href="port.html">
+            
+                    
+                    开放端口
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">self build</li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="build.html">
+            
+                <a href="build.html">
+            
+                    
+                    使用自己的镜像
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Volumes</li>
+        
+        
+    
+        <li class="chapter " data-level="10.1" >
+            
+                <span>
+            
+                    
+                    Volumes
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="10.1.1" data-path="volumes/nfs.html">
+            
+                <a href="volumes/nfs.html">
+            
+                    
+                    NFS
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">对象存储</li>
+        
+        
+    
+        <li class="chapter " data-level="11.1" data-path="minio.html">
+            
+                <a href="minio.html">
+            
+                    
+                    Minio
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">测试</li>
+        
+        
+    
+        <li class="chapter " data-level="12.1" data-path="ab.html">
+            
+                <a href="ab.html">
+            
+                    
+                    ab command
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">TOOL</li>
+        
+        
+    
+        <li class="chapter active" data-level="13.1" data-path="gpg.html">
+            
+                <a href="gpg.html">
+            
+                    
+                    Git GPG
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="13.2" data-path="mirror.html">
+            
+                <a href="mirror.html">
+            
+                    
+                    常用镜像站点
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Git GPG</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="git-gpg">Git GPG</h1>
+<p><a href="https://cloud.tencent.com/redirect.php?redirect=10058&amp;cps_key=3a5255852d5db99dcd5da4c72f05df61" target="_blank"><img src="https://img.shields.io/badge/AD-%E8%85%BE%E8%AE%AF%E4%BA%91%E5%AE%B9%E5%99%A8%E6%9C%8D%E5%8A%A1-blue.svg" alt=""></a> <a href="https://cloud.tencent.com/developer/support-plan?invite_code=13vokmlse8afh" target="_blank"><img src="https://img.shields.io/badge/Support-%E8%85%BE%E8%AE%AF%E4%BA%91%E8%87%AA%E5%AA%92%E4%BD%93-brightgreen.svg" alt=""></a></p>
+<ul>
+<li><p><a href="https://help.github.com/articles/managing-commit-signature-verification/" target="_blank">https://help.github.com/articles/managing-commit-signature-verification/</a></p>
+</li>
+<li><p>Windows <a href="https://www.gnupg.org/download/index.html" target="_blank">https://www.gnupg.org/download/index.html</a> Simple installer for the current GnuPG</p>
+</li>
+</ul>
+<pre class="language-"><code class="lang-bash">$ gpg --default-new-key-algo rsa4096 --gen-key
+
+<span class="token comment"># $ gpg --list-keys         #&#x516C;&#x94A5;</span>
+$ gpg --list-secret-keys --keyid-format LONG <span class="token comment"># #&#x79C1;&#x94A5;</span>
+
+sec   rsa4096/<span class="token operator">&lt;</span>GPG-key-id<span class="token operator">&gt;</span> 2018-09-15 <span class="token punctuation">[</span>SC<span class="token punctuation">]</span> <span class="token punctuation">[</span>expires: 2020-09-14<span class="token punctuation">]</span>
+      XXXX
+uid                 <span class="token punctuation">[</span>ultimate<span class="token punctuation">]</span> khs1994 <span class="token operator">&lt;</span>khs1994@khs1994.com<span class="token operator">&gt;</span>
+
+$ gpg --armor --export <span class="token operator">&lt;</span>GPG-key-id<span class="token operator">&gt;</span>
+
+<span class="token comment"># copy output to github</span>
+<span class="token comment"># https://help.github.com/articles/adding-a-new-gpg-key-to-your-github-account/</span>
+
+$ <span class="token function">git</span> config --global user.signingkey <span class="token operator">&lt;</span>GPG-key-id<span class="token operator">&gt;</span>
+$ <span class="token function">git</span> config --local commit.gpgsign <span class="token boolean">true</span>
+<span class="token comment"># $ git config --global commit.gpgsign true</span>
+
+<span class="token comment"># Windows &#x8BBE;&#x7F6E; gpg &#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;</span>
+<span class="token comment"># $ git config --global gpg.program &quot;C:\Program Files (x86)\gnupg\bin\gpg.exe&quot;</span>
+
+<span class="token comment"># Linux &#x53EF;&#x80FD;&#x4F1A;&#x9047;&#x5230;&#x9519;&#x8BEF;</span>
+<span class="token comment"># &#x5728; ~/.bashrc ~/.bash_profile &#x4E24;&#x4E2A;&#x6587;&#x4EF6;&#x4E2D;&#x52A0;&#x5165; export GPG_TTY=$(tty)</span>
+
+$ <span class="token function">git</span> commit -S -s -m <span class="token string">&quot;your commit message&quot;</span>
+
+$ <span class="token function">git</span> tag -s mytag
+
+$ <span class="token function">git</span> tag -v mytag
+</code></pre>
+<h2 id="&#x5907;&#x4EFD;">&#x5907;&#x4EFD;</h2>
+<p>&#x5907;&#x4EFD;&#x5BC6;&#x94A5;&#x5206;&#x4E3A;&#x5907;&#x4EFD;&#x516C;&#x94A5;&#x548C;&#x79C1;&#x94A5;&#x4E24;&#x4E2A;&#x90E8;&#x5206;&#xFF0C;&#x5907;&#x4EFD;&#x516C;&#x94A5;&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash">$ gpg -o keyfilename --export <span class="token operator">&lt;</span>GPG-key-id<span class="token operator">&gt;</span>
+</code></pre>
+<p>&#x5982;&#x679C;&#x6CA1;&#x6709; KeyID &#x5219;&#x662F;&#x5907;&#x4EFD;&#x6240;&#x6709;&#x7684;&#x516C;&#x94A5;&#xFF0C;-o &#x8868;&#x793A;&#x8F93;&#x51FA;&#x5230;&#x6587;&#x4EF6; keyfilename &#x4E2D;&#xFF0C;&#x5982;&#x679C;&#x52A0;&#x4E0A; -a &#x53C2;&#x6570;&#x5219;&#x8F93;&#x51FA;&#x6587;&#x672C;&#x683C;&#x5F0F;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x5426;&#x5219;&#x8F93;&#x51FA;&#x7684;&#x662F;&#x4E8C;&#x8FDB;&#x5236;&#x683C;&#x5F0F;&#x4FE1;&#x606F;&#x3002;</p>
+<p>&#x5907;&#x4EFD;&#x79C1;&#x94A5;&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash">$ gpg -o keyfilename --export-secret-keys <span class="token operator">&lt;</span>GPG-key-id<span class="token operator">&gt;</span>
+</code></pre>
+<p>&#x7136;&#x540E;&#x5728;&#x522B;&#x7684;&#x673A;&#x5668;&#x4E0A;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;</p>
+<pre class="language-"><code class="lang-bash">$ gpg --import filename
+</code></pre>
+<h1 id="x509-key">X.509 Key</h1>
+<ul>
+<li><a href="https://help.github.com/articles/telling-git-about-your-signing-key/#telling-git-about-your-x509-key" target="_blank">https://help.github.com/articles/telling-git-about-your-signing-key/#telling-git-about-your-x509-key</a></li>
+</ul>
+<p>git 2.19 +</p>
+<pre class="language-"><code class="lang-bash">$ <span class="token function">git</span> config --global gpg.x509.program smimesign
+$ <span class="token function">git</span> config --global gpg.format x509
+</code></pre>
+<p>git 2.18 -</p>
+<pre class="language-"><code class="lang-bash">$ <span class="token function">git</span> config --global gpg.program smimesign
+</code></pre>
+<footer class="page-footer"><span class="copyright">&#xA9; 2018 khs1994.com</span><span class="footer-modification">&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2018-12-11 15:14:10
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="ab.html" class="navigation navigation-prev " aria-label="Previous page: ab command">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="mirror.html" class="navigation navigation-next " aria-label="Next page: 常用镜像站点">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Git GPG","level":"13.1","depth":1,"next":{"title":"常用镜像站点","level":"13.2","depth":1,"path":"mirror.md","ref":"mirror.md","articles":[]},"previous":{"title":"ab command","level":"12.1","depth":1,"path":"ab.md","ref":"ab.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-highlight","-livereload","tbfed-pagefooter@git+https://github.com/khs1994/gitbook-plugin-tbfed-pagefooter.git","prism"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"tbfed-pagefooter":{"copyright":"&copy 2018 khs1994.com","modify_label":"修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"khs1994.com","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"LNMP Docker 支持文档","language":"zh-hans","links":{"sidebar":{"Home":"//lnmp.khs1994.com","GitHub":"https://github.com/khs1994-docker/lnmp"}},"gitbook":"*","description":"khs1994-docker lnmp"},"file":{"path":"gpg.md","mtime":"2018-12-11T07:14:10.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-11T07:15:16.605Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

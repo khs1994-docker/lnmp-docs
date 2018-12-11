@@ -1,0 +1,1200 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>MySQL 一主两从 · LNMP Docker 支持文档</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="khs1994.com">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="memcached.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="//lnmp.khs1994.com" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://github.com/khs1994-docker/lnmp" target="_blank" class="custom-link">GitHub</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    首页
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../why.html">
+            
+                <a href="../why.html">
+            
+                    
+                    项目初衷
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../docker.html">
+            
+                <a href="../docker.html">
+            
+                    
+                    安装配置 Docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <a target="_blank" href="https://cloud.tencent.com/redirect.php?redirect=10058&cps_key=3a5255852d5db99dcd5da4c72f05df61">
+            
+                    
+                    腾讯云容器服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <a target="_blank" href="https://cloud.tencent.com/developer/support-plan?invite_code=13vokmlse8afh">
+            
+                    
+                    腾讯云自媒体
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">安装</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" >
+            
+                <span>
+            
+                    
+                    安装
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../install/linux.html">
+            
+                <a href="../install/linux.html">
+            
+                    
+                    Linux macOS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../install/windows.html">
+            
+                <a href="../install/windows.html">
+            
+                    
+                    Windows 10
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../init.html">
+            
+                <a href="../init.html">
+            
+                    
+                    项目初始化过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../path.html">
+            
+                <a href="../path.html">
+            
+                    
+                    路径说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../cli.html">
+            
+                <a href="../cli.html">
+            
+                    
+                    lnmp-docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" >
+            
+                <span>
+            
+                    
+                    开发环境
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.5.1" data-path="../development.html">
+            
+                <a href="../development.html">
+            
+                    
+                    使用方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="../git.html">
+            
+                <a href="../git.html">
+            
+                    
+                    Git
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">NGINX</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../nginx/">
+            
+                <a href="../nginx/">
+            
+                    
+                    NGINX
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../nginx/config.html">
+            
+                <a href="../nginx/config.html">
+            
+                    
+                    一键生成配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="../nginx/issue-ssl.html">
+            
+                <a href="../nginx/issue-ssl.html">
+            
+                    
+                    申请或自签发 SSL 证书
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="../nginx/https.html">
+            
+                <a href="../nginx/https.html">
+            
+                    
+                    HTTPS 配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4" data-path="../nginx/unit.html">
+            
+                <a href="../nginx/unit.html">
+            
+                    
+                    NGINX Unit
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../command.html">
+            
+                <a href="../command.html">
+            
+                    
+                    PHPer 常用命令容器化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../config.html">
+            
+                <a href="../config.html">
+            
+                    
+                    软件配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../crontab.html">
+            
+                <a href="../crontab.html">
+            
+                    
+                    Crontab
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">PHP</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" >
+            
+                <span>
+            
+                    
+                    PHP
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../php.html">
+            
+                <a href="../php.html">
+            
+                    
+                    PHP 扩展列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="../xdebug.html">
+            
+                <a href="../xdebug.html">
+            
+                    
+                    Xdebug
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="../laravel.html">
+            
+                <a href="../laravel.html">
+            
+                    
+                    Laravel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.4" data-path="../composer.html">
+            
+                <a href="../composer.html">
+            
+                    
+                    Composer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.5" data-path="../phpunit.html">
+            
+                <a href="../phpunit.html">
+            
+                    
+                    PHPUnit
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" >
+            
+                <span>
+            
+                    
+                    Composer
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.2.1" data-path="../composer/satis.html">
+            
+                <a href="../composer/satis.html">
+            
+                    
+                    Satis
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">生产环境</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../production.html">
+            
+                <a href="../production.html">
+            
+                    
+                    生产环境(重要)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.1" data-path="../swarm/">
+            
+                <a href="../swarm/">
+            
+                    
+                    Swarm mode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.2" data-path="../kubernetes/">
+            
+                <a href="../kubernetes/">
+            
+                    
+                    Kubernetes
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.2.1" data-path="../kubernetes/docker-desktop.html">
+            
+                <a href="../kubernetes/docker-desktop.html">
+            
+                    
+                    k8s on Docker for Desktop
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.3" data-path="../registry.html">
+            
+                <a href="../registry.html">
+            
+                    
+                    Docker Registry
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Supervisord</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../supervisord.html">
+            
+                <a href="../supervisord.html">
+            
+                    
+                    Supervisord
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">ClusterKit</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    ClusterKit
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="7.1.1" data-path="mysql.html">
+            
+                <a href="mysql.html">
+            
+                    
+                    MySQL 一主两从
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.2" data-path="memcached.html">
+            
+                <a href="memcached.html">
+            
+                    
+                    Memcached 集群
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.3" data-path="redis_cluster.html">
+            
+                <a href="redis_cluster.html">
+            
+                    
+                    Redis Cluster 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.4" data-path="redis_replication.html">
+            
+                <a href="redis_replication.html">
+            
+                    
+                    Redis Replication
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.5" data-path="redis_sentinel.html">
+            
+                <a href="redis_sentinel.html">
+            
+                    
+                    Redis Sentinel
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" >
+            
+                <span>
+            
+                    
+                    树莓派3
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.2.1" data-path="../arm.html">
+            
+                <a href="../arm.html">
+            
+                    
+                    ARM架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="../systemd.html">
+            
+                <a href="../systemd.html">
+            
+                    
+                    systemd
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.4" data-path="../backup.html">
+            
+                <a href="../backup.html">
+            
+                    
+                    备份恢复
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.5" data-path="../cleanup.html">
+            
+                <a href="../cleanup.html">
+            
+                    
+                    清理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.6" data-path="../cn.html">
+            
+                <a href="../cn.html">
+            
+                    
+                    国内网络问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.7" >
+            
+                <span>
+            
+                    
+                    实验玩法
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.7.1" data-path="../linuxkit.html">
+            
+                <a href="../linuxkit.html">
+            
+                    
+                    LinuxKit
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7.8" data-path="../wechat.html">
+            
+                <a href="../wechat.html">
+            
+                    
+                    微信小程序 PHP 后端部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">port</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../port.html">
+            
+                <a href="../port.html">
+            
+                    
+                    开放端口
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">self build</li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="../build.html">
+            
+                <a href="../build.html">
+            
+                    
+                    使用自己的镜像
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Volumes</li>
+        
+        
+    
+        <li class="chapter " data-level="10.1" >
+            
+                <span>
+            
+                    
+                    Volumes
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="10.1.1" data-path="../volumes/nfs.html">
+            
+                <a href="../volumes/nfs.html">
+            
+                    
+                    NFS
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">对象存储</li>
+        
+        
+    
+        <li class="chapter " data-level="11.1" data-path="../minio.html">
+            
+                <a href="../minio.html">
+            
+                    
+                    Minio
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">测试</li>
+        
+        
+    
+        <li class="chapter " data-level="12.1" data-path="../ab.html">
+            
+                <a href="../ab.html">
+            
+                    
+                    ab command
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">TOOL</li>
+        
+        
+    
+        <li class="chapter " data-level="13.1" data-path="../gpg.html">
+            
+                <a href="../gpg.html">
+            
+                    
+                    Git GPG
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="13.2" data-path="../mirror.html">
+            
+                <a href="../mirror.html">
+            
+                    
+                    常用镜像站点
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >MySQL 一主两从</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="mysql-&#x590D;&#x5236;">MySQL &#x590D;&#x5236;</h1>
+<p><a href="https://cloud.tencent.com/redirect.php?redirect=10058&amp;cps_key=3a5255852d5db99dcd5da4c72f05df61" target="_blank"><img src="https://img.shields.io/badge/AD-%E8%85%BE%E8%AE%AF%E4%BA%91%E5%AE%B9%E5%99%A8%E6%9C%8D%E5%8A%A1-blue.svg" alt=""></a> <a href="https://cloud.tencent.com/developer/support-plan?invite_code=13vokmlse8afh" target="_blank"><img src="https://img.shields.io/badge/Support-%E8%85%BE%E8%AE%AF%E4%BA%91%E8%87%AA%E5%AA%92%E4%BD%93-brightgreen.svg" alt=""></a></p>
+<ul>
+<li><p>&#x4E00;&#x4E3B;&#x4E24;&#x4ECE; &#x4E3B;&#x8D1F;&#x8D23;&#x5199;&#xFF0C;&#x4E24;&#x4ECE;&#x8D1F;&#x8D23;&#x8BFB;</p>
+</li>
+<li><p>&#x591A;&#x4E3B;&#x4E00;&#x4ECE; &#xFF08;&#x591A;&#x6E90;&#x590D;&#x5236;&#xFF09;</p>
+</li>
+</ul>
+<h2 id="&#x5F00;&#x53D1;&#x73AF;&#x5883;">&#x5F00;&#x53D1;&#x73AF;&#x5883;</h2>
+<pre class="language-"><code class="lang-bash"><span class="token comment"># &#x521B;&#x5EFA;&#x96C6;&#x7FA4;&#xFF0C;&#x82E5;&#x52A0;&#x4E0A; -d &#x53C2;&#x6570;&#x8868;&#x793A;&#x540E;&#x53F0;&#x8FD0;&#x884C;&#x3002;</span>
+
+$ ./lnmp-docker clusterkit-mysql-up <span class="token punctuation">[</span>-d<span class="token punctuation">]</span>
+
+<span class="token comment"># &#x9500;&#x6BC1;&#x96C6;&#x7FA4;&#xFF0C;&#x82E5;&#x52A0;&#x4E0A; -v &#x53C2;&#x6570;&#x4F1A;&#x9500;&#x6BC1;&#x6570;&#x636E;&#x5377;&#x3002;</span>
+
+$ ./lnmp-docker clusterkit-mysql-down <span class="token punctuation">[</span>-v<span class="token punctuation">]</span>
+</code></pre>
+<h3 id="swarm-mode">Swarm mode</h3>
+<pre class="language-"><code class="lang-bash"><span class="token comment"># &#x521B;&#x5EFA;&#x96C6;&#x7FA4;</span>
+
+$ ./lnmp-docker clusterkit-mysql-deploy
+
+<span class="token comment"># &#x9500;&#x6BC1;&#x96C6;&#x7FA4;</span>
+
+$ ./lnmp-docker clusterkit-mysql-remove
+</code></pre>
+<h1 id="php-&#x8FDE;&#x63A5;&#x96C6;&#x7FA4;">PHP &#x8FDE;&#x63A5;&#x96C6;&#x7FA4;</h1>
+<p>&#x4E3B;&#x670D;&#x52A1;&#x5668; <code>root</code> &#x8D26;&#x53F7;</p>
+<p>&#x4ECE;&#x670D;&#x52A1;&#x5668; <code>node</code> &#x8D26;&#x53F7;&#xFF08;&#x62E5;&#x6709;&#x53EA;&#x8BFB;&#x6743;&#x9650;&#xFF09;</p>
+<h2 id="laravel">Laravel</h2>
+<pre class="language-"><code class="lang-php"><span class="token single-quoted-string string">&apos;mysql&apos;</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">[</span>
+    <span class="token single-quoted-string string">&apos;read&apos;</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">[</span>
+        <span class="token single-quoted-string string">&apos;host&apos;</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token single-quoted-string string">&apos;192.168.1.1&apos;</span><span class="token punctuation">,</span>
+        <span class="token single-quoted-string string">&apos;port&apos;</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token single-quoted-string string">&apos;3306&apos;</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token single-quoted-string string">&apos;write&apos;</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">[</span>
+        <span class="token single-quoted-string string">&apos;host&apos;</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token single-quoted-string string">&apos;196.168.1.2&apos;</span><span class="token punctuation">,</span>
+        <span class="token single-quoted-string string">&apos;port&apos;</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token single-quoted-string string">&apos;3306&apos;</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token single-quoted-string string">&apos;sticky&apos;</span>    <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token single-quoted-string string">&apos;driver&apos;</span>    <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token single-quoted-string string">&apos;mysql&apos;</span><span class="token punctuation">,</span>
+    <span class="token single-quoted-string string">&apos;database&apos;</span>  <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token single-quoted-string string">&apos;database&apos;</span><span class="token punctuation">,</span>
+    <span class="token single-quoted-string string">&apos;username&apos;</span>  <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token single-quoted-string string">&apos;root&apos;</span><span class="token punctuation">,</span>
+    <span class="token single-quoted-string string">&apos;password&apos;</span>  <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token single-quoted-string string">&apos;&apos;</span><span class="token punctuation">,</span>
+    <span class="token single-quoted-string string">&apos;charset&apos;</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token single-quoted-string string">&apos;utf8mb4&apos;</span><span class="token punctuation">,</span>
+    <span class="token single-quoted-string string">&apos;collation&apos;</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token single-quoted-string string">&apos;utf8mb4_unicode_ci&apos;</span><span class="token punctuation">,</span>
+    <span class="token single-quoted-string string">&apos;prefix&apos;</span>    <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token single-quoted-string string">&apos;&apos;</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span><span class="token punctuation">,</span>
+</code></pre>
+<pre class="language-"><code class="lang-php"><span class="token variable">$users</span> <span class="token operator">=</span> <span class="token constant">DB</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token function">connection</span><span class="token punctuation">(</span><span class="token single-quoted-string string">&apos;foo&apos;</span><span class="token punctuation">)</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token function">select</span><span class="token punctuation">(</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<footer class="page-footer"><span class="copyright">&#xA9; 2018 khs1994.com</span><span class="footer-modification">&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2018-12-11 15:14:10
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: ClusterKit">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="memcached.html" class="navigation navigation-next " aria-label="Next page: Memcached 集群">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"MySQL 一主两从","level":"7.1.1","depth":2,"next":{"title":"Memcached 集群","level":"7.1.2","depth":2,"path":"clusterkit/memcached.md","ref":"clusterkit/memcached.md","articles":[]},"previous":{"title":"ClusterKit","level":"7.1","depth":1,"path":"clusterkit/README.md","ref":"clusterkit/README.md","articles":[{"title":"MySQL 一主两从","level":"7.1.1","depth":2,"path":"clusterkit/mysql.md","ref":"clusterkit/mysql.md","articles":[]},{"title":"Memcached 集群","level":"7.1.2","depth":2,"path":"clusterkit/memcached.md","ref":"clusterkit/memcached.md","articles":[]},{"title":"Redis Cluster ","level":"7.1.3","depth":2,"path":"clusterkit/redis_cluster.md","ref":"clusterkit/redis_cluster.md","articles":[]},{"title":"Redis Replication","level":"7.1.4","depth":2,"path":"clusterkit/redis_replication.md","ref":"clusterkit/redis_replication.md","articles":[]},{"title":"Redis Sentinel","level":"7.1.5","depth":2,"path":"clusterkit/redis_sentinel.md","ref":"clusterkit/redis_sentinel.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-sharing","-highlight","-livereload","tbfed-pagefooter@git+https://github.com/khs1994/gitbook-plugin-tbfed-pagefooter.git","prism"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"tbfed-pagefooter":{"copyright":"&copy 2018 khs1994.com","modify_label":"修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"khs1994.com","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"LNMP Docker 支持文档","language":"zh-hans","links":{"sidebar":{"Home":"//lnmp.khs1994.com","GitHub":"https://github.com/khs1994-docker/lnmp"}},"gitbook":"*","description":"khs1994-docker lnmp"},"file":{"path":"clusterkit/mysql.md","mtime":"2018-12-11T07:14:10.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-11T07:15:16.605Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
