@@ -511,6 +511,19 @@
             
         </li>
     
+        <li class="chapter " data-level="4.1.6" data-path="xhprof.html">
+            
+                <a href="xhprof.html">
+            
+                    
+                    XHProf
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -1115,10 +1128,15 @@ datadir         <span class="token operator">=</span> /var/lib/mysql-my
 <p><strong>4.</strong> &#x5728; <code>./config</code> &#x76EE;&#x5F55;&#x4E2D;&#x65B0;&#x5EFA; <code>nginx.my</code> &#x6587;&#x4EF6;&#x5939;&#xFF0C;HTTPD &#x65B0;&#x5EFA; <code>httpd.my</code> &#x6587;&#x4EF6;&#x5939;</p>
 <p><strong>5.</strong> &#x6211;&#x4EEC;&#x4EE5;&#x540E;&#x5C31;&#x5728; <code>nginx.my</code> &#x6587;&#x4EF6;&#x5939;&#x5185;&#x65B0;&#x589E; NGINX &#x5B50;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF08;&#x8BF7;&#x53C2;&#x7167; <code>nginx</code> &#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x793A;&#x4F8B;&#x914D;&#x7F6E;&#xFF09;&#xFF0C;HTTPD &#x540C;&#x7406;&#x3002;&#x4E3A;&#x4E86;&#x65B9;&#x4FBF;&#x5907;&#x4EFD;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x53EF;&#x4EE5;&#x5728; <code>./config/nginx.my</code> &#x6587;&#x4EF6;&#x5939;&#x4E2D;&#x521D;&#x59CB;&#x5316;&#x4E00;&#x4E2A; Git &#x4ED3;&#x5E93;&#xFF0C;&#x901A;&#x8FC7; Git &#x7BA1;&#x7406;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x3002;&#x5F53;&#x4F60;&#x5207;&#x6362;&#x5230;&#x53E6;&#x4E00;&#x4E2A;&#x73AF;&#x5883;&#x4E2D;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x5F88;&#x65B9;&#x4FBF;&#x7684;&#x901A;&#x8FC7; git clone url &#x5FEB;&#x901F;&#x6062;&#x590D;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x3002;</p>
 <p><strong>6.</strong> &#x4FEE;&#x6539; <code>.env</code> &#x6587;&#x4EF6; <code>LNMP_NGINX_CONF=nginx.my.conf</code> <code>LNMP_NGINX_CONF_D=nginx.my</code>&#xFF0C;HTTPD &#x540C;&#x7406;</p>
+<h2 id="&#x7B80;&#x5355;&#x7684;&#x81EA;&#x5B9A;&#x4E49;-phpini-&#x914D;&#x7F6E;">&#x7B80;&#x5355;&#x7684;&#x81EA;&#x5B9A;&#x4E49; <code>php.ini</code> &#x914D;&#x7F6E;</h2>
+<p>&#x7F16;&#x8F91; <code>./config/php/docker-php.ini</code> &#x6587;&#x4EF6;&#x3002;</p>
+<blockquote>
+<p>&#x5F53;&#x4F60;&#x9700;&#x8981;&#x66F4;&#x6539;&#x5927;&#x91CF;&#x7684; <code>php.ini</code> &#x914D;&#x7F6E;&#x65F6;&#xFF0C;&#x5EFA;&#x8BAE;&#x4F7F;&#x7528; <code>LNMP_PHP_INI</code> &#x53D8;&#x91CF;&#x5B9A;&#x4E49;&#x81EA;&#x5DF1;&#x7684; <code>php.ini</code> &#x6587;&#x4EF6;&#x6240;&#x5728;&#x8DEF;&#x5F84;&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x81EA;&#x5DF1;&#x7684; <code>php.ini</code> &#x6587;&#x4EF6;&#x4E86;&#x3002;</p>
+</blockquote>
 <h2 id="&#x5176;&#x4ED6;&#x8F6F;&#x4EF6;">&#x5176;&#x4ED6;&#x8F6F;&#x4EF6;</h2>
 <p>&#x4E0D;&#x518D;&#x8D58;&#x8FF0;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x8FD8;&#x662F;&#x5B9E;&#x5728;&#x4E0D;&#x77E5;&#x9053;&#x8BE5;&#x600E;&#x4E48;&#x6B63;&#x786E;&#x7684;&#x81EA;&#x5B9A;&#x4E49;&#x914D;&#x7F6E;&#xFF0C;&#x8BF7;&#x5728;&#x672C;&#x9879;&#x76EE; GitHub &#x63D0;&#x51FA; <code>issue</code>&#x3002;</p>
 <footer class="page-footer"><span class="copyright">&#xA9; 2018 khs1994.com</span><span class="footer-modification">&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
-2018-12-14 16:52:36
+2018-12-15 12:10:40
 </span></footer>
                                 
                                 </section>
@@ -1162,7 +1180,7 @@ datadir         <span class="token operator">=</span> /var/lib/mysql-my
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"软件配置","level":"3.3","depth":1,"next":{"title":"Crontab","level":"3.4","depth":1,"path":"crontab.md","ref":"crontab.md","articles":[]},"previous":{"title":"PHPer 常用命令容器化","level":"3.2","depth":1,"path":"command.md","ref":"command.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-highlight","-livereload","tbfed-pagefooter@git+https://github.com/khs1994/gitbook-plugin-tbfed-pagefooter.git","prism"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"tbfed-pagefooter":{"copyright":"&copy 2018 khs1994.com","modify_label":"修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"khs1994.com","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"LNMP Docker 支持文档","language":"zh-hans","links":{"sidebar":{"Home":"//lnmp.khs1994.com","GitHub":"https://github.com/khs1994-docker/lnmp"}},"gitbook":"*","description":"khs1994-docker lnmp"},"file":{"path":"config.md","mtime":"2018-12-14T08:52:36.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-14T08:53:41.525Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"软件配置","level":"3.3","depth":1,"next":{"title":"Crontab","level":"3.4","depth":1,"path":"crontab.md","ref":"crontab.md","articles":[]},"previous":{"title":"PHPer 常用命令容器化","level":"3.2","depth":1,"path":"command.md","ref":"command.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-highlight","-livereload","tbfed-pagefooter@git+https://github.com/khs1994/gitbook-plugin-tbfed-pagefooter.git","prism"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"tbfed-pagefooter":{"copyright":"&copy 2018 khs1994.com","modify_label":"修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"khs1994.com","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"LNMP Docker 支持文档","language":"zh-hans","links":{"sidebar":{"Home":"//lnmp.khs1994.com","GitHub":"https://github.com/khs1994-docker/lnmp"}},"gitbook":"*","description":"khs1994-docker lnmp"},"file":{"path":"config.md","mtime":"2018-12-15T04:10:40.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-15T04:11:41.901Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
