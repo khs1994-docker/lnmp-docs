@@ -1114,8 +1114,27 @@ $ <span class="token function">git</span> stash pop
 
 $ <span class="token function">git</span> add <span class="token keyword">.</span>
 </code></pre>
+<h2 id="crlfwin-lfunix">CRLF(Win) LF(Unix)</h2>
+<h3 id="&#x63D0;&#x4EA4;&#x65F6;&#x8F6C;&#x6362;&#x4E3A;lf&#xFF0C;&#x68C0;&#x51FA;&#x65F6;&#x8F6C;&#x6362;&#x4E3A;crlf">&#x63D0;&#x4EA4;&#x65F6;&#x8F6C;&#x6362;&#x4E3A;LF&#xFF0C;&#x68C0;&#x51FA;&#x65F6;&#x8F6C;&#x6362;&#x4E3A;CRLF</h3>
+<pre class="language-"><code class="lang-bash">$ <span class="token function">git</span> config --global core.autocrlf <span class="token boolean">true</span>
+</code></pre>
+<h3 id="&#x63D0;&#x4EA4;&#x65F6;&#x8F6C;&#x6362;&#x4E3A;lf&#xFF0C;&#x68C0;&#x51FA;&#x65F6;&#x4E0D;&#x8F6C;&#x6362;">&#x63D0;&#x4EA4;&#x65F6;&#x8F6C;&#x6362;&#x4E3A;LF&#xFF0C;&#x68C0;&#x51FA;&#x65F6;&#x4E0D;&#x8F6C;&#x6362;</h3>
+<pre class="language-"><code class="lang-bash">$ <span class="token function">git</span> config --global core.autocrlf input
+</code></pre>
+<h3 id="&#x63D0;&#x4EA4;&#x68C0;&#x51FA;&#x5747;&#x4E0D;&#x8F6C;&#x6362;">&#x63D0;&#x4EA4;&#x68C0;&#x51FA;&#x5747;&#x4E0D;&#x8F6C;&#x6362;</h3>
+<pre class="language-"><code class="lang-bash">$ <span class="token function">git</span> config --global core.autocrlf <span class="token boolean">false</span>
+</code></pre>
+<h3 id="&#x62D2;&#x7EDD;&#x63D0;&#x4EA4;&#x5305;&#x542B;&#x6DF7;&#x5408;&#x6362;&#x884C;&#x7B26;&#x7684;&#x6587;&#x4EF6;">&#x62D2;&#x7EDD;&#x63D0;&#x4EA4;&#x5305;&#x542B;&#x6DF7;&#x5408;&#x6362;&#x884C;&#x7B26;&#x7684;&#x6587;&#x4EF6;</h3>
+<pre class="language-"><code class="lang-bash">$ <span class="token function">git</span> config --global core.safecrlf <span class="token boolean">true</span>
+</code></pre>
+<h3 id="&#x5141;&#x8BB8;&#x63D0;&#x4EA4;&#x5305;&#x542B;&#x6DF7;&#x5408;&#x6362;&#x884C;&#x7B26;&#x7684;&#x6587;&#x4EF6;">&#x5141;&#x8BB8;&#x63D0;&#x4EA4;&#x5305;&#x542B;&#x6DF7;&#x5408;&#x6362;&#x884C;&#x7B26;&#x7684;&#x6587;&#x4EF6;</h3>
+<pre class="language-"><code class="lang-bash">$ <span class="token function">git</span> config --global core.safecrlf <span class="token boolean">false</span>
+</code></pre>
+<h3 id="&#x63D0;&#x4EA4;&#x5305;&#x542B;&#x6DF7;&#x5408;&#x6362;&#x884C;&#x7B26;&#x7684;&#x6587;&#x4EF6;&#x65F6;&#x7ED9;&#x51FA;&#x8B66;&#x544A;">&#x63D0;&#x4EA4;&#x5305;&#x542B;&#x6DF7;&#x5408;&#x6362;&#x884C;&#x7B26;&#x7684;&#x6587;&#x4EF6;&#x65F6;&#x7ED9;&#x51FA;&#x8B66;&#x544A;</h3>
+<pre class="language-"><code class="lang-bash">$ <span class="token function">git</span> config --global core.safecrlf warn
+</code></pre>
 <footer class="page-footer"><span class="copyright">&#xA9; 2018 khs1994.com</span><span class="footer-modification">&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
-2019-01-04 11:58:24
+2019-01-07 16:26:59
 </span></footer>
                                 
                                 </section>
@@ -1159,7 +1178,7 @@ $ <span class="token function">git</span> add <span class="token keyword">.</spa
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Git","level":"14.1","depth":1,"next":{"title":"Git GPG","level":"14.2","depth":1,"path":"gpg.md","ref":"gpg.md","articles":[]},"previous":{"title":"ab command","level":"13.1","depth":1,"path":"ab.md","ref":"ab.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-highlight","-livereload","tbfed-pagefooter@git+https://github.com/khs1994/gitbook-plugin-tbfed-pagefooter.git","prism"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"tbfed-pagefooter":{"copyright":"&copy 2018 khs1994.com","modify_label":"修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"khs1994.com","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"LNMP Docker 支持文档","language":"zh-hans","links":{"sidebar":{"Home":"//lnmp.khs1994.com","GitHub":"https://github.com/khs1994-docker/lnmp"}},"gitbook":"*","description":"khs1994-docker lnmp"},"file":{"path":"git.md","mtime":"2019-01-04T03:58:24.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-04T03:59:29.832Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Git","level":"14.1","depth":1,"next":{"title":"Git GPG","level":"14.2","depth":1,"path":"gpg.md","ref":"gpg.md","articles":[]},"previous":{"title":"ab command","level":"13.1","depth":1,"path":"ab.md","ref":"ab.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-highlight","-livereload","tbfed-pagefooter@git+https://github.com/khs1994/gitbook-plugin-tbfed-pagefooter.git","prism"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"tbfed-pagefooter":{"copyright":"&copy 2018 khs1994.com","modify_label":"修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"khs1994.com","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"LNMP Docker 支持文档","language":"zh-hans","links":{"sidebar":{"Home":"//lnmp.khs1994.com","GitHub":"https://github.com/khs1994-docker/lnmp"}},"gitbook":"*","description":"khs1994-docker lnmp"},"file":{"path":"git.md","mtime":"2019-01-07T08:26:59.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-07T08:28:00.115Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
