@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>首页 · LNMP Docker 支持文档</title>
+        <title>Swoole · LNMP Docker 支持文档</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -61,8 +61,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="why.html" />
+    <link rel="next" href="composer/" />
     
+    
+    <link rel="prev" href="wechat.html" />
     
 
     </head>
@@ -105,7 +107,7 @@
         
         
     
-        <li class="chapter active" data-level="1.1" data-path="./">
+        <li class="chapter " data-level="1.1" data-path="./">
             
                 <a href="./">
             
@@ -568,7 +570,7 @@
             
         </li>
     
-        <li class="chapter " data-level="5.1.8" data-path="swoole.html">
+        <li class="chapter active" data-level="5.1.8" data-path="swoole.html">
             
                 <a href="swoole.html">
             
@@ -1105,7 +1107,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >首页</a>
+        <a href="." >Swoole</a>
     </h1>
 </div>
 
@@ -1120,85 +1122,11 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="khs1994-dockerlnmp-&#x652F;&#x6301;&#x6587;&#x6863;">khs1994-docker/lnmp &#x652F;&#x6301;&#x6587;&#x6863;</h1>
-<p><a href="https://github.com/khs1994-docker/lnmp" target="_blank"><img src="https://img.shields.io/github/stars/khs1994-docker/lnmp.svg?style=social&amp;label=Stars" alt="GitHub stars"></a> <a href="https://github.com/khs1994-docker/lnmp/releases" target="_blank"><img src="https://img.shields.io/github/release/khs1994-docker/lnmp.svg" alt="GitHub release"></a> <a href="https://travis-ci.org/khs1994-docker/lnmp" target="_blank"><img src="https://travis-ci.org/khs1994-docker/lnmp.svg?branch=master" alt="Build Status"></a> <a href="https://github.com/khs1994-docker/lnmp/releases" target="_blank"><img src="https://img.shields.io/github/release/khs1994-docker/lnmp.svg" alt="GitHub release"></a> <a href="https://github.com/khs1994-docker/lnmp/releases" target="_blank"><img src="https://img.shields.io/github/release/khs1994-docker/lnmp/all.svg" alt="GitHub (pre-)release"></a> <a href="https://github.com/khs1994-docker/lnmp" target="_blank"><img src="https://img.shields.io/github/license/khs1994-docker/lnmp.svg" alt="license"></a> <a href="https://cloud.tencent.com/redirect.php?redirect=10058&amp;cps_key=3a5255852d5db99dcd5da4c72f05df61" target="_blank"><img src="https://img.shields.io/badge/AD-%E8%85%BE%E8%AE%AF%E4%BA%91%E5%AE%B9%E5%99%A8%E6%9C%8D%E5%8A%A1-blue.svg" alt=""></a> <a href="https://cloud.tencent.com/developer/support-plan?invite_code=13vokmlse8afh" target="_blank"><img src="https://img.shields.io/badge/Support-%E8%85%BE%E8%AE%AF%E4%BA%91%E8%87%AA%E5%AA%92%E4%BD%93-brightgreen.svg" alt=""></a></p>
-<p align="center">
-<img width="600" src="https://user-images.githubusercontent.com/16733187/47264269-2467a780-d546-11e8-8cde-f63207ee28d9.jpg">
-</p>
-
-<p>&#x672C;&#x9879;&#x76EE;&#x4E0D;&#x5EFA;&#x8BAE;&#x521A;&#x5B66;&#x4E60; LNMP &#x7684;&#x65B0;&#x624B;&#x4F7F;&#x7528;&#xFF0C;&#x5F53;&#x638C;&#x63E1; LNMP &#x5230;&#x4E00;&#x5B9A;&#x7A0B;&#x5EA6;&#x65F6;&#xFF0C;&#x76F8;&#x4FE1;&#x4F60;&#x4E00;&#x5B9A;&#x4F1A;&#x4E0E;&#x6211;&#x4EA7;&#x751F;&#x5171;&#x9E23;&#xFF1A;<a href="why.html">&#x9879;&#x76EE;&#x521D;&#x8877;</a>&#x3002;</p>
-<p>&#x672C;&#x9879;&#x76EE;&#x5B9E;&#x9645;&#x53EA;&#x662F;&#x4E00;&#x4E2A; PHP &#x7A0B;&#x5E8F;&#x7684;&#x8FD0;&#x884C;&#x73AF;&#x5883;&#xFF0C;PHP &#x9879;&#x76EE;&#x6587;&#x4EF6;&#x4F4D;&#x4E8E; <code>./app/*</code>&#xFF0C;nginx &#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4F4D;&#x4E8E; <code>./config/nginx/*.conf</code>&#x3002;</p>
-<p>&#x5728;&#x7EBF;&#x9605;&#x8BFB;&#xFF1A;<a href="SUMMARY.md">GitHub</a></p>
-<p>&#x5728;&#x7EBF;&#x9605;&#x8BFB;&#xFF1A;<a href="https://docs.lnmp.khs1994.com/" target="_blank">WebSite</a></p>
-<p>&#x6216;&#x5728;&#x547D;&#x4EE4;&#x884C;&#x6267;&#x884C; <code>./lnmp-docker docs</code> &#x5728;&#x672C;&#x5730;&#x9605;&#x8BFB;&#x3002;</p>
-<h2 id="&#x5FAE;&#x4FE1;&#x8BA2;&#x9605;&#x53F7;">&#x5FAE;&#x4FE1;&#x8BA2;&#x9605;&#x53F7;</h2>
-<p align="center">
-<img width="200" src="https://user-images.githubusercontent.com/16733187/46847944-84a96b80-ce19-11e8-9f0c-ec84b2ac463e.jpg">
-</p>
-
-<p align="center"><strong>&#x5173;&#x6CE8;&#x9879;&#x76EE;&#x4F5C;&#x8005;&#x5FAE;&#x4FE1;&#x8BA2;&#x9605;&#x53F7;&#xFF0C;&#x63A5;&#x6536;&#x9879;&#x76EE;&#x6700;&#x65B0;&#x52A8;&#x6001;</strong></p>
-
-<h2 id="&#x7248;&#x672C;&#x7B56;&#x7565;">&#x7248;&#x672C;&#x7B56;&#x7565;</h2>
-<p>&#x4E3A;&#x4E86;&#x66F4;&#x597D;&#x7684;&#x5B9E;&#x8DF5; <code>git flow</code>&#xFF0C;&#x672C;&#x9879;&#x76EE;&#x5C06;&#x4F7F;&#x7528;&#x591A;&#x5206;&#x652F;&#x8FDB;&#x884C;&#x5F00;&#x53D1;&#x3002;</p>
-<p><code>vYY.MM</code> &#x5206;&#x652F;&#x4E0E; Docker Stable &#x7248;&#x672C; <code>vYY.MM</code> &#x4E00;&#x81F4;&#xFF0C;&#x6BCF;&#x5F53; PHP &#x4E3B;&#x7EBF;&#x7248;&#x672C;&#x5347;&#x7EA7;&#x65F6;&#xFF0C;&#x4FEE;&#x6B63;&#x7248;&#x672C;&#x53F7;&#x52A0; 1&#x3002;</p>
-<p>&#x4F8B;&#x5982;&#xFF1A;&#x5F53; Docker &#x684C;&#x9762;&#x7248;&#x53D1;&#x5E03; <code>v18.09</code> &#x65F6;&#xFF0C;&#x672C;&#x9879;&#x76EE;&#x5C06;&#x4ECE; <code>master</code> &#x5206;&#x652F;&#x68C0;&#x51FA; <code>18.09</code> &#x5206;&#x652F;&#xFF0C;PHP &#x53D1;&#x5E03; 7.2.13 &#x65F6;&#xFF0C;&#x672C;&#x9879;&#x76EE;&#x5C06;&#x53D1;&#x5E03; <code>v18.09</code> &#x7248;&#x672C;&#xFF0C;PHP &#x53D1;&#x5E03; 7.2.13 &#x65F6;&#xFF0C;&#x672C;&#x9879;&#x76EE;&#x5C06;&#x53D1;&#x5E03; <code>v18.09.01</code> &#x7248;&#x672C;&#xFF0C;&#x5F53;&#x5927;&#x90E8;&#x5206; PHP &#x6269;&#x5C55;&#x517C;&#x5BB9; PHP 7.3.x &#x65F6;&#xFF0C;&#x672C;&#x9879;&#x76EE;&#x4F1A;&#x5C06; PHP &#x7248;&#x672C;&#x7531; 7.2 &#x5207;&#x6362;&#x5230; 7.3</p>
-<p>&#x5373;&#xFF1A;&#x672C;&#x9879;&#x76EE; <code>v18.09</code> &#x4E0E; <strong>Docker &#x684C;&#x9762;&#x7248;</strong> <code>v18.09</code> &#x548C; <strong>PHP</strong> <code>7.2.13</code> &#x5BF9;&#x5E94;&#x3002;</p>
-<h2 id="&#x4E3A;&#x4EC0;&#x4E48;&#x9009;&#x62E9;-caas">&#x4E3A;&#x4EC0;&#x4E48;&#x9009;&#x62E9; CaaS</h2>
+                                <h1 id="swoole">Swoole</h1>
+<p>&#x8BF7;&#x4F7F;&#x7528;&#x4EE5;&#x4E0B;&#x955C;&#x50CF;&#xFF1A;</p>
 <ul>
-<li><p>&#x5206;&#x949F;&#x7EA7;&#x4E0A;&#x7EBF;</p>
-</li>
-<li><p>&#x5206;&#x949F;&#x7EA7;&#x8FC1;&#x79FB;</p>
-</li>
-</ul>
-<h2 id="&#x7279;&#x8272;">&#x7279;&#x8272;</h2>
-<ul>
-<li><p>&#x5404;&#x7EC4;&#x4EF6;&#xFF08;&#x8F6F;&#x4EF6;&#xFF09;&#x591A;&#x7248;&#x672C;&#x652F;&#x6301;</p>
-</li>
-<li><p>&#x5FEB;&#x901F;&#x65B0;&#x5EFA; <code>PHP</code> &#x9879;&#x76EE;</p>
-</li>
-<li><p>&#x5FEB;&#x901F;&#x751F;&#x6210; <code>nginx</code> &#x914D;&#x7F6E;</p>
-</li>
-<li><p>&#x4E00;&#x952E;&#x7533;&#x8BF7; <code>SSL</code> &#x8BC1;&#x4E66;</p>
-</li>
-<li><p>&#x4E00;&#x952E;&#x751F;&#x6210; <code>SSL</code> &#x81EA;&#x7B7E;&#x540D;&#x8BC1;&#x4E66;&#x7528;&#x4E8E;&#x5F00;&#x53D1;&#x3001;&#x6D4B;&#x8BD5;&#x73AF;&#x5883;</p>
-</li>
-<li><p>&#x652F;&#x6301; <strong>&#x5F00;&#x53D1;&#x73AF;&#x5883;</strong> <strong>&#x6D4B;&#x8BD5;&#x73AF;&#x5883;</strong></p>
-</li>
-<li><p>&#x652F;&#x6301; <code>Swarm mode</code> <code>k8s</code> <strong>&#x751F;&#x4EA7;&#x73AF;&#x5883;</strong> &#x90E8;&#x7F72;</p>
-</li>
-<li><p>&#x652F;&#x6301;&#x4E00;&#x952E;&#x542F;&#x52A8; <code>MySQL</code> <code>Redis</code> <code>Memcached</code> &#x96C6;&#x7FA4;</p>
-</li>
-<li><p>&#x6240;&#x6709;&#x8F6F;&#x4EF6;&#x5C3D;&#x53EF;&#x80FD;&#x542F;&#x7528;&#x4E86; <strong>TLS</strong> <strong>HTTPS</strong>&#xFF0C;&#x4E3A;&#x63A8;&#x52A8; <strong>HTTPS</strong> &#x666E;&#x53CA;&#x8D21;&#x732E;&#x81EA;&#x5DF1;&#x7684;&#x529B;&#x91CF;</p>
-</li>
-<li><p>&#x5185;&#x7F6E; <code>Drone CI</code> &#x79C1;&#x6709;&#x5316; CI/CD &#x65B9;&#x6848;</p>
-</li>
-</ul>
-<h2 id="&#x7CFB;&#x5217;&#x6587;&#x7AE0;">&#x7CFB;&#x5217;&#x6587;&#x7AE0;</h2>
-<ul>
-<li><p><a href="https://segmentfault.com/a/1190000013364203" target="_blank">&#x5B8C;&#x5168;&#x4F7F;&#x7528; Docker &#x5F00;&#x53D1; PHP &#x9879;&#x76EE; &#xFF08;&#x4E00;&#xFF09;: &#x5B89;&#x88C5;&#x7BC7;</a></p>
-</li>
-<li><p><a href="https://segmentfault.com/a/1190000013364300" target="_blank">&#x5B8C;&#x5168;&#x4F7F;&#x7528; Docker &#x5F00;&#x53D1; PHP &#x9879;&#x76EE; &#xFF08;&#x4E8C;&#xFF09;: &#x914D;&#x7F6E;&#x7BC7;</a></p>
-</li>
-<li><p><a href="https://segmentfault.com/a/1190000013364609" target="_blank">&#x5B8C;&#x5168;&#x4F7F;&#x7528; Docker &#x5F00;&#x53D1; PHP &#x9879;&#x76EE; &#xFF08;&#x4E09;&#xFF09;: &#x547D;&#x4EE4;&#x5BB9;&#x5668;&#x5316;</a></p>
-</li>
-<li><p><a href="https://segmentfault.com/a/1190000013364774" target="_blank">&#x5B8C;&#x5168;&#x4F7F;&#x7528; Docker &#x5F00;&#x53D1; PHP &#x9879;&#x76EE; &#xFF08;&#x56DB;&#xFF09;: CLI</a></p>
-</li>
-<li><p><a href="https://segmentfault.com/a/1190000013484870" target="_blank">&#x5B8C;&#x5168;&#x4F7F;&#x7528; Docker &#x5F00;&#x53D1; PHP &#x9879;&#x76EE; &#xFF08;&#x4E94;&#xFF09;: &#x751F;&#x4EA7;&#x73AF;&#x5883; Swarm mode</a></p>
-</li>
-<li><p><a href="https://segmentfault.com/a/" target="_blank">&#x5B8C;&#x5168;&#x4F7F;&#x7528; Docker &#x5F00;&#x53D1; PHP &#x9879;&#x76EE; &#xFF08;&#x516D;&#xFF09;: &#x751F;&#x4EA7;&#x73AF;&#x5883; Kubernetes</a></p>
-</li>
-<li><p><a href="https://segmentfault.com/a/" target="_blank">&#x5B8C;&#x5168;&#x4F7F;&#x7528; Docker &#x5F00;&#x53D1; PHP &#x9879;&#x76EE; &#xFF08;&#x4E03;&#xFF09;: Redis &#x4E3B;&#x4ECE;&#x590D;&#x5236;</a></p>
-</li>
-<li><p><a href="https://segmentfault.com/a/" target="_blank">&#x5B8C;&#x5168;&#x4F7F;&#x7528; Docker &#x5F00;&#x53D1; PHP &#x9879;&#x76EE; &#xFF08;&#x516B;&#xFF09;: Redis &#x96C6;&#x7FA4;</a></p>
-</li>
-<li><p><a href="https://segmentfault.com/a/" target="_blank">&#x5B8C;&#x5168;&#x4F7F;&#x7528; Docker &#x5F00;&#x53D1; PHP &#x9879;&#x76EE; &#xFF08;&#x4E5D;&#xFF09;: Mysql &#x4E00;&#x4E3B;&#x4E24;&#x4ECE;&#x96C6;&#x7FA4;</a></p>
-</li>
-</ul>
-<h2 id="&#x6350;&#x8D60;">&#x6350;&#x8D60;</h2>
-<p>&#x8BF7;&#x8BBF;&#x95EE; <a href="https://zan.khs1994.com" target="_blank">https://zan.khs1994.com</a></p>
-<h2 id="&#x514D;&#x8D39;&#x4F53;&#x9A8C;-kubernetes">&#x514D;&#x8D39;&#x4F53;&#x9A8C; Kubernetes</h2>
-<ul>
-<li><a href="https://cloud.tencent.com/redirect.php?redirect=10058&amp;cps_key=3a5255852d5db99dcd5da4c72f05df61" target="_blank">&#x817E;&#x8BAF;&#x4E91;&#x5BB9;&#x5668;&#x670D;&#x52A1;</a></li>
+<li><code>khs1994/php:7.2.14-swoole-alpine</code></li>
+<li><code>khs1994/php:7.3.1-swoole-alpine</code></li>
 </ul>
 <footer class="page-footer"><span class="copyright">&#xA9; 2018 khs1994.com</span><span class="footer-modification">&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
 2019-01-24 23:06:52
@@ -1229,8 +1157,12 @@
 
             
                 
+                <a href="wechat.html" class="navigation navigation-prev " aria-label="Previous page: 微信小程序 PHP 后端部署">
+                    <i class="fa fa-angle-left"></i>
+                </a>
                 
-                <a href="why.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 项目初衷">
+                
+                <a href="composer/" class="navigation navigation-next " aria-label="Next page: Composer">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1241,7 +1173,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"首页","level":"1.1","depth":1,"next":{"title":"项目初衷","level":"1.2","depth":1,"path":"why.md","ref":"why.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-highlight","-livereload","tbfed-pagefooter@git+https://github.com/khs1994/gitbook-plugin-tbfed-pagefooter.git","prism"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"tbfed-pagefooter":{"copyright":"&copy 2018 khs1994.com","modify_label":"修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"khs1994.com","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"LNMP Docker 支持文档","language":"zh-hans","links":{"sidebar":{"Home":"//lnmp.khs1994.com","GitHub":"https://github.com/khs1994-docker/lnmp"}},"gitbook":"*","description":"khs1994-docker lnmp"},"file":{"path":"README.md","mtime":"2019-01-24T15:06:52.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-24T15:07:59.467Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Swoole","level":"5.1.8","depth":2,"next":{"title":"Composer","level":"6.1","depth":1,"path":"composer/README.md","ref":"composer/README.md","articles":[{"title":"Satis","level":"6.1.1","depth":2,"path":"composer/satis.md","ref":"composer/satis.md","articles":[]}]},"previous":{"title":"微信小程序 PHP 后端部署","level":"5.1.7","depth":2,"path":"wechat.md","ref":"wechat.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-highlight","-livereload","tbfed-pagefooter@git+https://github.com/khs1994/gitbook-plugin-tbfed-pagefooter.git","prism"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"tbfed-pagefooter":{"copyright":"&copy 2018 khs1994.com","modify_label":"修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"khs1994.com","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"LNMP Docker 支持文档","language":"zh-hans","links":{"sidebar":{"Home":"//lnmp.khs1994.com","GitHub":"https://github.com/khs1994-docker/lnmp"}},"gitbook":"*","description":"khs1994-docker lnmp"},"file":{"path":"swoole.md","mtime":"2019-01-24T15:06:52.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-24T15:07:59.467Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
