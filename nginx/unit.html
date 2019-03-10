@@ -1122,10 +1122,105 @@
                                 
                                 <h1 id="nginx-unit">NGINX Unit</h1>
 <p><a href="https://cloud.tencent.com/redirect.php?redirect=10058&amp;cps_key=3a5255852d5db99dcd5da4c72f05df61" target="_blank"><img src="https://img.shields.io/badge/AD-%E8%85%BE%E8%AE%AF%E4%BA%91%E5%AE%B9%E5%99%A8%E6%9C%8D%E5%8A%A1-blue.svg" alt=""></a> <a href="https://cloud.tencent.com/developer/support-plan?invite_code=13vokmlse8afh" target="_blank"><img src="https://img.shields.io/badge/Support-%E8%85%BE%E8%AE%AF%E4%BA%91%E8%87%AA%E5%AA%92%E4%BD%93-brightgreen.svg" alt=""></a></p>
-<p>&#x4E00;&#x4E2A;&#x5E94;&#x7528;&#x76D1;&#x542C;&#x4E00;&#x4E2A;&#x7AEF;&#x53E3;&#x3002;</p>
-<p>&#x524D;&#x7AEF;&#x901A;&#x8FC7; NGINX &#x8FDB;&#x884C;&#x4EE3;&#x7406;&#x3002;</p>
+<h2 id="wsl-&#x7F16;&#x8BD1;&#x5B89;&#x88C5;-nginx-unit">WSL &#x7F16;&#x8BD1;&#x5B89;&#x88C5; NGINX Unit</h2>
+<p>&#x672C;&#x6587;&#x4F7F;&#x7528;&#x6E90;&#x7801;&#x7F16;&#x8BD1;&#x5B89;&#x88C5;&#x3002;</p>
+<ul>
+<li><p><a href="https://unit.nginx.org/" target="_blank">&#x5B98;&#x65B9;&#x6587;&#x6863;</a></p>
+</li>
+<li><p><a href="https://github.com/khs1994-php/unit/blob/master/README_zh-Hans.md" target="_blank">&#x7B2C;&#x4E09;&#x65B9;&#x4E2D;&#x6587;&#x6587;&#x6863;</a></p>
+</li>
+</ul>
+<pre class="language-"><code class="lang-bash"><span class="token comment"># &#x514B;&#x9686;&#x6E90;&#x7801;</span>
+$ <span class="token function">git</span> clone --depth<span class="token operator">=</span>1 https://github.com/nginx/unit
+
+$ <span class="token function">cd</span> unit
+
+$ ./configure --prefix<span class="token operator">=</span>/usr/local/nginx_unit --openssl
+
+<span class="token comment"># PHP &#x7F16;&#x8BD1;&#x9009;&#x9879;&#x5FC5;&#x987B;&#x989D;&#x5916;&#x589E;&#x52A0; --enable-embed=shared &#x9009;&#x9879;&#xFF0C;&#x672C;&#x6587;&#x4F7F;&#x7528; $ lnmp-wsl-install php 7.2.5 &#x547D;&#x4EE4;&#x6240;&#x5B89;&#x88C5; PHP</span>
+
+$ ./configure php \
+      --module<span class="token operator">=</span>php72 \
+      --lib-path<span class="token operator">=</span>/usr/local/php72/lib \
+      --config<span class="token operator">=</span>/usr/local/php72/bin/php-config
+
+      <span class="token comment"># --lib-static</span>
+
+$ <span class="token function">make</span>
+
+$ <span class="token function">sudo</span> <span class="token function">make</span> <span class="token function">install</span>
+
+$ <span class="token function">cd</span> /usr/local/nginx_unit
+
+$ <span class="token function">sudo</span> ./sbin/unitd
+</code></pre>
+<h2 id="&#x914D;&#x7F6E;">&#x914D;&#x7F6E;</h2>
+<ul>
+<li><a href="http://unit.nginx.org/configuration/#php-application" target="_blank">http://unit.nginx.org/configuration/#php-application</a></li>
+<li><a href="http://unit.nginx.org/howto/wordpress/" target="_blank">http://unit.nginx.org/howto/wordpress/</a></li>
+<li><a href="https://www.nginx.com/blog/installing-wordpress-with-nginx-unit" target="_blank">https://www.nginx.com/blog/installing-wordpress-with-nginx-unit</a></li>
+</ul>
+<h3 id="tls-14--support">TLS (1.4 + support)</h3>
+<p>$ cat cert.pem ca.pem key.pem &gt; bundle.pem</p>
+<p>$ curl -X PUT --data-binary @bundle.pem 127.1:8443/certificates/cert_name</p>
+<p>&#x901A;&#x8FC7;&#x5411; Linux Socket &#x53D1;&#x9001; json &#x6587;&#x4EF6;&#x6765;&#x914D;&#x7F6E; Unit</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+    <span class="token property">&quot;listeners&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;*:8300&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">&quot;application&quot;</span><span class="token operator">:</span> <span class="token string">&quot;test&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;tls&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+              <span class="token property">&quot;certificate&quot;</span><span class="token operator">:</span> <span class="token string">&quot;cert_name&quot;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+    <span class="token property">&quot;applications&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;test&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;php&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;processes&quot;</span><span class="token operator">:</span> <span class="token number">20</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;root&quot;</span><span class="token operator">:</span> <span class="token string">&quot;/app/demo/public&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;index&quot;</span><span class="token operator">:</span> <span class="token string">&quot;index.php&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;user&quot;</span><span class="token operator">:</span> <span class="token string">&quot;www-blogs&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;group&quot;</span><span class="token operator">:</span> <span class="token string">&quot;www-blogs&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;options&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token property">&quot;file&quot;</span><span class="token operator">:</span> <span class="token string">&quot;/etc/php.ini&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;admin&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token property">&quot;memory_limit&quot;</span><span class="token operator">:</span> <span class="token string">&quot;256M&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;variables_order&quot;</span><span class="token operator">:</span> <span class="token string">&quot;EGPCS&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;expose_php&quot;</span><span class="token operator">:</span> <span class="token string">&quot;0&quot;</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;user&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                  <span class="token property">&quot;display_errors&quot;</span><span class="token operator">:</span> <span class="token string">&quot;0&quot;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p><code>root</code> &#x8DEF;&#x5F84;&#x5FC5;&#x987B;&#x586B;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;&#xFF0C;&#x5C06;&#x4EE5;&#x4E0A;&#x5185;&#x5BB9;&#x4FDD;&#x5B58;&#x4E3A; <code>start.json</code> &#x672C;&#x6587;&#x4FDD;&#x5B58;&#x5230; <code>/usr/local/nginx_unit/start.json</code></p>
+<pre class="language-"><code class="lang-bash">$ <span class="token function">cd</span> /app/test
+
+$ <span class="token function">vi</span> index.php
+
+<span class="token operator">&lt;</span>?php
+
+phpinfo<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="&#x65B0;&#x5EFA;&#x914D;&#x7F6E;">&#x65B0;&#x5EFA;&#x914D;&#x7F6E;</h3>
+<pre class="language-"><code class="lang-bash">$ <span class="token function">curl</span> -X PUT -d @/usr/local/nginx_unit/start.json  \
+       --unix-socket /usr/local/nginx_unit/control.unit.sock \
+       http://localhost/config
+
+<span class="token comment"># &#x6D4F;&#x89C8;&#x5668;&#x6253;&#x5F00; 127.0.0.1:8300 &#x770B;&#x5230; phpinfo &#x9875;&#x9762;&#xFF0C;&#x5B8C;&#x6210;&#x90E8;&#x7F72;</span>
+</code></pre>
+<p>&#x5176;&#x4ED6;&#x8BED;&#x8A00;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#xFF0C;&#x6216;&#x66F4;&#x591A;&#x4F7F;&#x7528;&#x8BE6;&#x60C5;&#x81EA;&#x884C;&#x67E5;&#x770B;&#x6587;&#x6863;&#x3002;</p>
+<h2 id="&#x4F7F;&#x7528;&#x65B9;&#x6CD5;">&#x4F7F;&#x7528;&#x65B9;&#x6CD5;</h2>
+<p>&#x4E00;&#x4E2A;&#x5E94;&#x7528;&#x76D1;&#x542C;&#x4E00;&#x4E2A;&#x7AEF;&#x53E3;&#x3002;&#x524D;&#x7AEF;&#x901A;&#x8FC7; NGINX &#x8FDB;&#x884C;&#x4EE3;&#x7406;&#x3002;</p>
+<h2 id="&#x793A;&#x4F8B;">&#x793A;&#x4F8B;</h2>
+<h3 id="laravel">Laravel</h3>
+<p>&#x8BF7;&#x67E5;&#x770B; <code>config/nginx/unit-laravel.config</code> <code>unit-laravel.json</code></p>
 <footer class="page-footer"><span class="copyright">&#xA9; 2018 khs1994.com</span><span class="footer-modification">&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
-2019-03-08 12:00:44
+2019-03-10 23:43:06
 </span></footer>
                                 
                                 </section>
@@ -1165,7 +1260,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"NGINX Unit","level":"4.1.4","depth":2,"next":{"title":"PHP","level":"5.1","depth":1,"ref":"","articles":[{"title":"PHP 扩展列表","level":"5.1.1","depth":2,"path":"php.md","ref":"php.md","articles":[]},{"title":"Xdebug","level":"5.1.2","depth":2,"path":"xdebug.md","ref":"xdebug.md","articles":[]},{"title":"Laravel","level":"5.1.3","depth":2,"path":"laravel.md","ref":"laravel.md","articles":[]},{"title":"Composer","level":"5.1.4","depth":2,"path":"composer.md","ref":"composer.md","articles":[]},{"title":"PHPUnit","level":"5.1.5","depth":2,"path":"phpunit.md","ref":"phpunit.md","articles":[]},{"title":"XHProf","level":"5.1.6","depth":2,"path":"xhprof.md","ref":"xhprof.md","articles":[]},{"title":"微信小程序 PHP 后端部署","level":"5.1.7","depth":2,"path":"wechat.md","ref":"wechat.md","articles":[]},{"title":"Swoole","level":"5.1.8","depth":2,"path":"swoole.md","ref":"swoole.md","articles":[]}]},"previous":{"title":"HTTPS 配置","level":"4.1.3","depth":2,"path":"nginx/https.md","ref":"nginx/https.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-highlight","-livereload","tbfed-pagefooter@git+https://github.com/khs1994/gitbook-plugin-tbfed-pagefooter.git","prism"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"tbfed-pagefooter":{"copyright":"&copy 2018 khs1994.com","modify_label":"修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"khs1994.com","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"LNMP Docker 支持文档","language":"zh-hans","links":{"sidebar":{"Home":"//lnmp.khs1994.com","GitHub":"https://github.com/khs1994-docker/lnmp"}},"gitbook":"*","description":"khs1994-docker lnmp"},"file":{"path":"nginx/unit.md","mtime":"2019-03-08T04:00:44.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-08T04:01:48.035Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"NGINX Unit","level":"4.1.4","depth":2,"next":{"title":"PHP","level":"5.1","depth":1,"ref":"","articles":[{"title":"PHP 扩展列表","level":"5.1.1","depth":2,"path":"php.md","ref":"php.md","articles":[]},{"title":"Xdebug","level":"5.1.2","depth":2,"path":"xdebug.md","ref":"xdebug.md","articles":[]},{"title":"Laravel","level":"5.1.3","depth":2,"path":"laravel.md","ref":"laravel.md","articles":[]},{"title":"Composer","level":"5.1.4","depth":2,"path":"composer.md","ref":"composer.md","articles":[]},{"title":"PHPUnit","level":"5.1.5","depth":2,"path":"phpunit.md","ref":"phpunit.md","articles":[]},{"title":"XHProf","level":"5.1.6","depth":2,"path":"xhprof.md","ref":"xhprof.md","articles":[]},{"title":"微信小程序 PHP 后端部署","level":"5.1.7","depth":2,"path":"wechat.md","ref":"wechat.md","articles":[]},{"title":"Swoole","level":"5.1.8","depth":2,"path":"swoole.md","ref":"swoole.md","articles":[]}]},"previous":{"title":"HTTPS 配置","level":"4.1.3","depth":2,"path":"nginx/https.md","ref":"nginx/https.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-highlight","-livereload","tbfed-pagefooter@git+https://github.com/khs1994/gitbook-plugin-tbfed-pagefooter.git","prism"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"tbfed-pagefooter":{"copyright":"&copy 2018 khs1994.com","modify_label":"修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"khs1994.com","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"LNMP Docker 支持文档","language":"zh-hans","links":{"sidebar":{"Home":"//lnmp.khs1994.com","GitHub":"https://github.com/khs1994-docker/lnmp"}},"gitbook":"*","description":"khs1994-docker lnmp"},"file":{"path":"nginx/unit.md","mtime":"2019-03-10T15:43:06.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-10T15:44:07.822Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
